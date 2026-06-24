@@ -1,1 +1,25 @@
+sudo apt update
+sudo apt install ansible -y 
+ansible --version
 
+gedit host.in (or) nano host.ini
+[local]  
+localhost ansible_connection=local  
+
+gedit setup.yml (or)  nano setup.yml 
+---
+- name: Basic Server Setup 
+hosts: local 
+become: yes    
+tasks: 
+- name: Update apt cache 
+apt: 
+update_cache: yes 
+- name: Install curl 
+apt: 
+name: curl 
+state: present 
+
+ansible-playbook -i hosts.ini setup.yml --ask-become-pass 
+
+sudo apt remove ansible 
