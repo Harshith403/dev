@@ -48,6 +48,11 @@ $mvn compile
 $mvn test
 $mvn package
 $ls target/
+-
+mvn clean
+mvn package
+ls target/
+-
 $java -cp target/MyMavenApp-1.0-SNAPSHOT.jar com.example.App
 $cd src/main/java/com/example
 $gedit App.java
