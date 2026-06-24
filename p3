@@ -25,10 +25,11 @@ println 'Hello, Gradle!'
 }
 }
 
-
 $gradle hello
 $gradle build
 $cd ..
+
+
 $mkdir kotlin
 $cd kotlin
 $gradle init --type java-application
