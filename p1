@@ -1,0 +1,11 @@
+1. Download Gradle:  
+wget https://services.gradle.org/distributions/gradle-8.0-bin.zip 
+
+2. Unzip the Downloaded File: 
+Sudo unzip gradle-8.0-bin.zip -d /opt/  
+sudo mv gradle-8.0 /opt/gradle 
+ls /opt/gradle/bin 
+export PATH=/opt/gradle/bin:$PATH 
+
+4. Verify the Installation:  
+gradle -v 
