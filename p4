@@ -2,6 +2,7 @@ $mvn archetype:generate -DgroupId=com.example -DartifactId=HelloMaven
 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 $ls
 $cd HelloMaven
+$tree
 $gedit pom.xml
 
 
@@ -24,6 +25,7 @@ $gedit pom.xml
 <target>11</target>
 </configuration>
 </plugin>
+
 </plugins>
 </build>
 </project>
@@ -31,13 +33,14 @@ $gedit pom.xml
 ▪ mvn compile
 ▪ mvn test
 ▪ mvn package
-▪ ls target
+▪ ls target/
 ▪ java -cp target/HelloMaven-1.0-SNAPSHOT.jar com.example.App
 -------------------------------------------------------------------
 cd ft101
 $mkdir hellogroovy
 $cd hellogroovy
 $gradle init --type java-application
+$tree
 $gedit build.gradle
 
 
@@ -61,3 +64,18 @@ $mkdir -p src/main/java/com/example
 $gedit src/main/java/com/example/App.java
 $gradle build 
 $gradle run
+
+-------------------------------------------------------------------
+$gedit src/main/java/com/example/App.java
+
+package com.example;
+/**
+ * Hello World!
+ */
+public class App
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
